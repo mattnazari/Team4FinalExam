@@ -12,7 +12,10 @@ const Profile = () =>{
           <DefTextInput/>
           <Text>Image URL</Text>
           <DefTextInput/>
-          <Button/>
+          <Button
+          bgcolor="yellow"
+          title="save"
+          />
     </View>
   )
 }
