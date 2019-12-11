@@ -1,25 +1,36 @@
-import React from 'react';
-import {View, Image, TextInput, StyleSheet, Animated} from 'react-native';
+import React, {useState} from 'react';
+import {View, Image, TextInput, StyleSheet} from 'react-native';
 
-const TextInput = () =>{
+const DefTextInput = () =>{
+const [value, onChangeText] = useState('Default Placeholder');
+
   return(
     <View>
-        <TextInput style={styles.txtinput}>
-
-        </TextInput>
+       <Image source ={require('../Editing-Text-icon.png')}
+          style={styles.icon}/>
+        <TextInput style={styles.txtinput}
+          onChangeText={text => onChangeText(text)}
+          value={value}/>
+      
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   txtinput:{
-      flex:1,
-      width: '100%',
-      height: '50%',
+      height: 80,
+      width: "100%",
       borderColor: 'grey',
-      borderWidth: 1,      
+      borderWidth: 1,
+      color: '#aaaaaa',
+      flexDirection: 'row',
+      },
+  icon:{
+    width:50,
+    height: 50,
+    flexDirection:'row',
   }
 })
 
 
-export default TextInput;
+export default DefTextInput;
