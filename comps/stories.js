@@ -4,7 +4,7 @@ import {} from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 
 import Button from './Button';
-import Image from './Image';
+import ImageComp from './ImageComp';
 import Message from './Message';
 import TextInput from './TextInput';
 import Tabs from './Tabs';
@@ -19,7 +19,7 @@ storiesOf("Final Exam Comps", module)
 })
 .add("Image", ()=>{
     return(
-        <Image
+        <ImageComp
         />
     )
 })
