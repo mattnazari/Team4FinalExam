@@ -2,7 +2,7 @@ import React from 'react';
 import {View} from 'react-native';
 
 import Message from './Message';
-import Button from './Button';
+import TextInput from './TextInput';
 
 function MessageBoard (){
 
@@ -12,10 +12,7 @@ function MessageBoard (){
 
       <Message />
 
-      <Button 
-        title="send"
-        bgcolor="#4AF"
-      />
+      <TextInput />
         
     </View>
 
