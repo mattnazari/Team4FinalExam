@@ -18,7 +18,7 @@ function ImageComp (){
 
   return(
 
-    <View>
+    <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
 
         <Animated.Image 
           style={{width:wd_value, height:wd_value, borderRadius:50, borderColor:'green', borderWidth:4}}
