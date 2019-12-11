@@ -1,15 +1,35 @@
-import React from 'react';
-import {View, TextInput, Animated, StyleSheet} from 'react-native';
+import React, {useState} from 'react';
+import {View, TextInput, Animated, StyleSheet, TouchableOpacity, Image, Text} from 'react-native';
 import DefTextInput from './TextInput';
 import Button from './Button';
 
+
 const SendBar = () =>{
+  const [bg_color] = useState('#4af');
+  const [title] = useState("send"); 
+  const [wd_value] = useState(new Animated.Value(0));
+  // var bg_color = "#4af"
+  // var title = "send"
+
+Animated.timing(
+  wd_value,
+  {
+    toValue: 400 ,
+    duration: 500,
+  }
+).start();
+
+
   return(
-    <View style={styles.bar}>
-        <DefTextInput>
-        </DefTextInput>
-        <Button></Button>
-    </View>
+    <Animated.View style={{width: wd_value}}>
+      <View style={styles.bar}>
+          <DefTextInput/>
+          <Button
+             title= 'send'
+             bg_color= "#4af"
+          />
+      </View>
+    </Animated.View>
   )
 }
 
