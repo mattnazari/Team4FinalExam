@@ -1,40 +1,38 @@
 import React,{useState,useEffect}from 'react';
 import {View, Image, TouchableOpacity, Animated, Text} from 'react-native';
 
-const Button = () =>{
+const Button = (title, bgcolor) =>{
 
   const [butWidth] = useState(new Animated.Value(0));
   const [butHeight] = useState(new Animated.Value(0));
-
-  var mybutWidth = butWidth.interpolate({
-    inputRange: [0, 1],
-    outputRange: ["0%", "35%"]
-  });
-
-  var mybutHeight = butHeight.interpolate({
-    inputRange: [0, 1],
-    outputRange: ["0%", "10%"]
-  });
+  const [imgwd] = useState(new Animated.Value(0));
 
   useEffect(()=>{
     Animated.timing(butHeight, {
-      toValue: 1,
+      toValue: 50,
       duration: 500
     }).start();
     Animated.timing(butWidth, {
-      toValue: 1,
+      toValue: 100,
+      duration: 500
+    }).start();
+    Animated.timing(imgwd, {
+      toValue: 20,
       duration: 500
     }).start();
   })
 
+  var bgcolor = 'pink';
+  var title = ' Default\n Button';
+
   return(
-    <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
-      <TouchableOpacity style={{flexDirection:"row", alignItems:'center', backgroundColor:'pink', borderRadius:15, padding:10,width:mybutWidth,height:mybutHeight}}>
-      <Image
-      style={{width:50, height:50}}
+    <View style={{flex:1, alignItems:'center', paddingLeft:20}}>
+      <TouchableOpacity style={{flexDirection:"row", alignItems:'center', backgroundColor:bgcolor, borderRadius:15, padding:10,width:butWidth,height:butHeight}}>
+      <Animated.Image
+      style={{width:imgwd, height:imgwd}}
       source={{uri:'https://static.thenounproject.com/png/68669-200.png'}}
       />
-      <Text style={{color:'white'}}>{'Default\nButton'}</Text>
+      <Text style={{color:'white'}}>{title}</Text>
       </TouchableOpacity>
     </View>
   )

@@ -6,6 +6,8 @@ function Message (){
   const [op_value] = useState(new Animated.Value(0));
   const [wd_value] = useState(new Animated.Value(0));
 
+  const [msgcolor] = useState('rgb(80,100,120)');
+
   Animated.timing(
     wd_value,
     {

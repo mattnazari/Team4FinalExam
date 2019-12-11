@@ -5,7 +5,7 @@ import Message from './Message';
 import TextInput from './TextInput';
 import Button from './Button';
 
-function MessageBoard (title, bgcolor){
+function MessageBoard (){
 
   return(
 
@@ -13,7 +13,9 @@ function MessageBoard (title, bgcolor){
 
       <View style={{flex:1, margin:50}}>
         <Message />
-        <Message />
+        <Message 
+          setmsgcolor="blue"
+        />
         <Message />
       </View>
 
