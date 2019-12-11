@@ -24,6 +24,8 @@ function MessageBoard (setmsgcolor){
 
        <TextInput />
        <Button
+       title='send'
+       bgcolor='blue'
        />
 
       </View>
