@@ -1,27 +1,29 @@
 import React, {useState} from 'react';
 import {View, Image, TextInput, StyleSheet, Animated} from 'react-native';
 
-function DefTextInput (){
+function DefTextInput(){
 const [value, onChangeText] = useState('Send Message');
 const [wd_value] = useState(new Animated.Value(0));
 
 Animated.timing(
   wd_value,
   {
-    toValue: 100 ,
+    toValue: 400 ,
     duration: 500,
     delay: 100
   }
-)
+).start();
+
   return(
+    <Animated.View style={{width: wd_value}}>
     <Animated.View style={styles.container}>
        <Image source ={require('../Editing-Text-icon.png')}
           style={styles.icon}/>
-        <Animated.TextInput style={styles.txtinput}
+        <TextInput style={styles.txtinput}
           onChangeText={text => onChangeText(text)}
-          // value={value}
+          value={value}
           />
-      
+      </Animated.View>
     </Animated.View>
   )
 }
@@ -34,7 +36,7 @@ const styles = StyleSheet.create({
     padding: 30,
     justifyContent: 'center',
     flex: 1,
-    width: 'wd_value',
+
   },
 
   txtinput:{
