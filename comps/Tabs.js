@@ -18,12 +18,12 @@ const Tabs = () => {
     outputRange: ["0%", "25%"]
   });
 
-  var myTabHeight = tabWidth.interpolate({
+  var myTabHeight = tabHeight.interpolate({
     inputRange: [0, 1],
     outputRange: ["0%", "8%"]
   });
 
-  var myTabColor = tabWidth.interpolate({
+  var myTabColor = tabColor.interpolate({
     inputRange: [0, 1],
     outputRange: ["#000000", "#57af9b"]
   });
@@ -73,7 +73,7 @@ const Tabs = () => {
       >
         <TouchableOpacity>
           <Image
-            style={{ width: "40%", height: "40%" }}
+            style={{ width: "20%", height: "20%" }}
             source={require("../tabImg.png")}
           />
           <Text style={{ color: "white" }}>Default Tab</Text>
