@@ -5,8 +5,6 @@ import Button from './Button';
 
 
 const SendBar = () =>{
-  const [bg_color] = useState('#4af');
-  const [title] = useState("send"); 
   const [wd_value] = useState(new Animated.Value(0));
   // var bg_color = "#4af"
   // var title = "send"
@@ -25,6 +23,8 @@ Animated.timing(
       <View style={styles.bar}>
           <DefTextInput/>
           <Button
+          title="send"
+          bgcolor="#4af"
           />
       </View>
     </Animated.View>

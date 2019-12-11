@@ -32,7 +32,7 @@ useEffect(()=>{
   Animated.timing(
     butWidth,
     {
-      toValue:200,
+      toValue:130,
       duration:500
     }
   ).start();
@@ -40,7 +40,7 @@ useEffect(()=>{
   Animated.timing(
     butHeight,
     {
-      toValue:100,
+      toValue:70,
       duration:1000
     }
   ).start();
