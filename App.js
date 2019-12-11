@@ -10,7 +10,7 @@ import DefTextInput from './comps/TextInput';
 
 const App = () =>{
   return(
-    <View style={{justifyContent: 'center'}}>
+    <View style={styles.bg}>
       <Main/>
       <DefTextInput></DefTextInput>
     </View>
