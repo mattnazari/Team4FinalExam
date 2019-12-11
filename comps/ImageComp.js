@@ -1,14 +1,27 @@
-import React from 'react';
-import {View, Image} from 'react-native';
+import React, {useState} from 'react';
+import {View, Image, Animated} from 'react-native';
 
 function ImageComp (){
+
+  const [wd_value] = useState(new Animated.Value(1));
+
+  Animated.timing(
+
+    wd_value,
+    {
+      toValue:100,
+      duration:500,
+      delay:100
+    }
+
+  ).start();
 
   return(
 
     <View>
 
-        <Image 
-          style={{width:100, height:100, borderRadius:50, borderColor:'green', borderWidth:4}}
+        <Animated.Image 
+          style={{width:wd_value, height:wd_value, borderRadius:50, borderColor:'green', borderWidth:4}}
           source={require('./default-placeholder.png')}
         />
 
