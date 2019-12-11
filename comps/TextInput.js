@@ -44,11 +44,13 @@ const styles = StyleSheet.create({
       width: "90%",
       color: '#aaaaaa',
       marginRight:10,
+      backgroundColor: "white",
       },
 
   icon:{
-    width:50,
-    height: 50,
+    width:30,
+    height: 30,
+    margin: 10,
   }
 })
 
