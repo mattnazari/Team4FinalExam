@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {View, TouchableOpacity, Animated, Text, TextInput, Image, StyleSheet} from 'react-native';
 
 function Message (){
 
-
   return(
 
-    <View>
+    <Animated.View>
 
         <TouchableOpacity style={{flexDirection:'row', alignItems:'center', justifyContent:'center', width:'auto', height:100, backgroundColor:'rgb(80,100,120)', borderRadius:10}}>
 
@@ -20,7 +19,7 @@ function Message (){
           </View>
         </TouchableOpacity>
 
-    </View>
+    </Animated.View>
 
   )
 }
