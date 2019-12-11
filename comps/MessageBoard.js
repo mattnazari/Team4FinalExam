@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View} from 'react-native';
 
 import Message from './Message';
 import TextInput from './TextInput';
 import Button from './Button';
 
-function MessageBoard (){
+function MessageBoard (setmsgcolor){
+
 
   return(
 

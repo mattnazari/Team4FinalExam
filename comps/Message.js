@@ -6,7 +6,7 @@ function Message (){
   const [op_value] = useState(new Animated.Value(0));
   const [wd_value] = useState(new Animated.Value(0));
 
-  const [msgcolor] = useState('rgb(80,100,120)');
+  const [msgcolor,setmsgcolor] = useState('rgb(80,100,120)');
 
   Animated.timing(
     wd_value,
@@ -30,7 +30,7 @@ function Message (){
 
     <Animated.View style={{opacity:op_value, alignItems:'center', padding:15}}>
 
-        <TouchableOpacity style={{flexDirection:'row', alignItems:'center', justifyContent:'center', width:'auto', height:100, backgroundColor:'rgb(80,100,120)', borderRadius:10}}>
+        <TouchableOpacity style={{flexDirection:'row', alignItems:'center', justifyContent:'center', width:'auto', height:100, backgroundColor:msgcolor, borderRadius:10}}>
 
           <Animated.Image 
             style={{opacity:op_value, margin:20,  width:wd_value, height:wd_value, borderRadius:50, borderColor:'green', borderWidth:2}}
