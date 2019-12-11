@@ -3,10 +3,10 @@ import {View, Image, TouchableOpacity, Animated, Text} from 'react-native';
 
 const Button = () =>{
 
-  const [butWidth] = useState(new Animated.Value(0));
-  const [butHeight] = useState(new Animated.Value(0));
+  const [butWidth, setButW] = useState(new Animated.Value(0));
+  const [butHeight, setButH] = useState(new Animated.Value(0));
 
-  var mybutWidth = butWidth.interpolate({
+ /* var mybutWidth = butWidth.interpolate({
     inputRange: [0, 1],
     outputRange: ["0%", "35%"]
   });
@@ -26,10 +26,29 @@ const Button = () =>{
       duration: 500
     }).start();
   })
+*/
+
+useEffect(()=>{
+  Animated.timing(
+    butWidth,
+    {
+      toValue:200,
+      duration:500
+    }
+  ).start();
+
+  Animated.timing(
+    butHeight,
+    {
+      toValue:100,
+      duration:1000
+    }
+  ).start();
+}, []);
 
   return(
     <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
-      <TouchableOpacity style={{flexDirection:"row", alignItems:'center', backgroundColor:'pink', borderRadius:15, padding:10,width:mybutWidth,height:mybutHeight}}>
+      <TouchableOpacity style={{flexDirection:"row", alignItems:'center', backgroundColor:'pink', borderRadius:15, padding:10, width:butWidth,height:butHeight}}>
       <Image
       style={{width:50, height:50}}
       source={{uri:'https://static.thenounproject.com/png/68669-200.png'}}
