@@ -54,8 +54,7 @@ const Tabs = () => {
   return (
     <View
       style={{
-        width: "100%",
-        height: "100%",
+        flex:1,
         justifyContent: "center",
         alignItems: "center"
       }}
@@ -65,19 +64,19 @@ const Tabs = () => {
           width: myTabWidth,
           height: myTabHeight,
           backgroundColor: myTabColor,
-          display: "flex",
           alignItems: "center",
           borderTopLeftRadius: 5,
           borderTopRightRadius: 5
         }}
       >
-        <TouchableOpacity>
+        <TouchableOpacity style={{flex:1, justifyContent:'center', alignItems:'center', width:200, height:200}}>
+  
           <Image
-            style={{ width: "20%", height: "20%" }}
+            style={{ width: "20%", height: "20%", padding:20 }}
             source={require("../tabImg.png")}
           />
           <Text style={{ color: "white" }}>Default Tab</Text>
-        </TouchableOpacity>
+          </TouchableOpacity>
       </Animated.View>
     </View>
   );
