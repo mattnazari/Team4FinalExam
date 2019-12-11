@@ -14,8 +14,28 @@ storiesOf("Final Exam Comps", module)
 .add("Button", ()=>{
     return(
         <Button
-        title="button 1"
         />
+    )
+})
+.add("Image", ()=>{
+    return(
+        <Image
+        />
+    )
+})
+.add("Message", ()=>{
+    return(
+        <Message/>
+    )
+})
+.add("TextInput", ()=>{
+    return(
+        <TextInput/>
+    )
+})
+.add("Tabs", ()=>{
+    return(
+        <Tabs/>
     )
 })
 
