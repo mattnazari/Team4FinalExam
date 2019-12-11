@@ -15,7 +15,7 @@ Animated.timing(
 ).start();
 
   return(
-    <Animated.View style={{width: wd_value}}>
+    <Animated.View style={{width: wd_value, flex:1, justifyContent:'center', alignItems:'center'}}>
     <Animated.View style={styles.container}>
        <Image source ={require('../Editing-Text-icon.png')}
           style={styles.icon}/>
