@@ -19,7 +19,7 @@ Animated.timing(
 
 
   return(
-    <Animated.View style={{width: wd_value}}>
+    <Animated.View style={{width: wd_value, flex:1, justifyContent:'center', alignItems:'center'}}>
       <View style={styles.bar}>
           <DefTextInput/>
           <Button
