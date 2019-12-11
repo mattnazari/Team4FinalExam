@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
     padding: 30,
     justifyContent: 'center',
     flex: 1,
+    backgroundColor: 'white'
 
   },
 
