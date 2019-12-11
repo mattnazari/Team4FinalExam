@@ -26,7 +26,7 @@ function Message (){
 
   return(
 
-    <Animated.View style={{opacity:op_value, flex:1, justifyContent:'center', alignItems:'center'}}>
+    <Animated.View style={{opacity:op_value, alignItems:'center', padding:15}}>
 
         <TouchableOpacity style={{flexDirection:'row', alignItems:'center', justifyContent:'center', width:'auto', height:100, backgroundColor:'rgb(80,100,120)', borderRadius:10}}>
 
