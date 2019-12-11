@@ -25,8 +25,6 @@ Animated.timing(
       <View style={styles.bar}>
           <DefTextInput/>
           <Button
-             title= 'send'
-             bg_color= "#4af"
           />
       </View>
     </Animated.View>
@@ -37,6 +35,7 @@ const styles = StyleSheet.create({
   bar:{
     flexDirection:'row',
     justifyContent: 'center',
+    margin: 20,
   },
 
 });
